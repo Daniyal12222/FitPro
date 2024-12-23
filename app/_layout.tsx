@@ -3,5 +3,13 @@ import '../global.css';
 import { Stack } from 'expo-router';
 
 export default function Layout() {
-  return <Stack />;
+  return <Stack screenOptions={{ headerShown: false, }}>
+
+    <Stack.Screen name='exercises' options={{
+      presentation :'fullScreenModal'
+    }}/>
+    <Stack.Screen name='details' options={{
+      presentation :'modal'
+    }}/>
+  </Stack>
 }
